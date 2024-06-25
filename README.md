@@ -235,15 +235,16 @@ docker run -d --name kong-gateway \
 
 Where:
 
---name and --network: The name of the container to create, and the Docker network it communicates on.
-KONG_DATABASE: Specifies the type of database that Kong is using.
-KONG_PG_HOST: The name of the Postgres Docker container that is communicating over the kong-net network.
-KONG_PG_USER and KONG_PG_PASSWORD: The Postgres username and password. Kong Gateway needs the login information to store configuration data in the KONG_PG_HOST database.
-All _LOG parameters: set filepaths for the logs to output to, or use the values in the example to print messages and errors to stdout and stderr.
-KONG_ADMIN_LISTEN: The port that the Kong Admin API listens on for requests.
-KONG_ADMIN_GUI_URL: The URL for accessing Kong Manager, preceded by a protocol (for example, http://).
-KONG_LICENSE_DATA: (Enterprise only) If you have a license file and have saved it as an environment variable, this parameter pulls the license from your environment.
-
+<ol>
+	<li>--name and --network: The name of the container to create, and the Docker network it communicates on.</li>  
+	<li>KONG_DATABASE: Specifies the type of database that Kong is using.</li>  
+	<li>KONG_PG_HOST: The name of the Postgres Docker container that is communicating over the kong-net network.</li>  
+	<li>KONG_PG_USER and KONG_PG_PASSWORD: The Postgres username and password. Kong Gateway needs the login information to store configuration data in the KONG_PG_HOST database.</li>  
+	<li>All _LOG parameters: set filepaths for the logs to output to, or use the values in the example to print messages and errors to stdout and stderr.</li>  
+	<li>KONG_ADMIN_LISTEN: The port that the Kong Admin API listens on for requests.</li>  
+	<li>KONG_ADMIN_GUI_URL: The URL for accessing Kong Manager, preceded by a protocol (for example, http://).</li>  
+	<li>KONG_LICENSE_DATA: (Enterprise only) If you have a license file and have saved it as an environment variable, this parameter pulls the license from your environment.</li>  
+</ol>
 
 ## ⚙️ Open your browser and access the address below to view Kong Admin.
 
@@ -252,3 +253,10 @@ KONG_LICENSE_DATA: (Enterprise only) If you have a license file and have saved i
 ![docs_readme/kong_admin.png](docs_readme/kong_admin.png)
 
 
+## 📌 Version.
+
+1.0
+
+## ✒️ Author.
+
+Cícero Ednilson - ciceroednilson@gmail.com
