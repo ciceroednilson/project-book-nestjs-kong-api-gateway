@@ -111,14 +111,24 @@ npm start
 
 ## ⚙️ Test with Postman.
 
-![https://www.postman.com](https://www.postman.com)
+[https://www.postman.com](https://www.postman.com)
 
 ![docs_readme/postman.png](docs_readme/postman.png)
 
-### ⚙️ Find the books by genre "Dramaturgia".
+## ⚙️ Find the books by genre "Dramaturgia".
 
 ~~~~shell
 curl --location 'http://localhost:3000/book/Dramaturgia/genre'
 ~~~~
 
 ![docs_readme/find_by_genre.png](docs_readme/find_by_genre.png)
+
+## ⚙️ Find all books.
+
+~~~~shell
+curl --location 'http://localhost:3000/book/all'
+~~~~
+
+![docs_readme/find_all.png](docs_readme/find_all.png)
+
+
