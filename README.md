@@ -101,3 +101,10 @@ npm test
 npm start
 ~~~~
 ![docs_readme/api_start.png](docs_readme/api_start.png)
+
+
+## ⚙️ Open your browser and access the address below to view Swagger documentation.
+
+[http://localhost:3000/api](http://localhost:3000/api)
+
+![docs_readme/swagger.png](docs_readme/swagger.png)
