@@ -165,10 +165,90 @@ curl --location --request DELETE 'http://localhost:3000/book/2/key'
 
 ![docs_readme/dockering.png](docs_readme/dockering.png)
 
-## ⚙️ Create a container in Docker with our image..
+## ⚙️ Create a container in Docker with our image.
 
 ~~~~shell
 docker run  -p 3000:3000 --network=my-bridge-network --hostname api-book --name api-book -d img-api-book:latest
 ~~~~
 
 ![docs_readme/container.png](docs_readme/container.png)
+
+
+## ⚙️ Create a network in Docker for Kong Api Gateway.
+
+~~~~shell
+	docker network create kong-net
+~~~~
+
+## ⚙️ Create a container Postgres in Docker for Kong Data Base.
+
+~~~~shell
+	 docker run -d --name kong-database \
+  --network=kong-net \
+  -p 5432:5432 \
+  -e "POSTGRES_USER=kong" \
+  -e "POSTGRES_DB=kong" \
+  -e "POSTGRES_PASSWORD=kongpass" \
+  postgres:13
+~~~~
+
+POSTGRES_USER and POSTGRES_DB: Set these values to kong. This is the default value that Kong Gateway expects.
+POSTGRES_PASSWORD: Set the database password to any string. In this example, the Postgres container named kong-database can communicate with any containers on the kong-net network.
+
+## ⚙️ Prepare the Kong database.
+
+~~~~shell
+	docker run --rm --network=kong-net \
+ -e "KONG_DATABASE=postgres" \
+ -e "KONG_PG_HOST=kong-database" \
+ -e "KONG_PG_PASSWORD=kongpass" \
+ -e "KONG_PASSWORD=test" \
+kong/kong-gateway:3.6.1.4 kong migrations bootstrap
+~~~~
+
+## ⚙️ Create a container Kong in Docker.
+
+~~~~shell
+docker run -d --name kong-gateway \
+ --network=kong-net \
+ -e "KONG_DATABASE=postgres" \
+ -e "KONG_PG_HOST=kong-database" \
+ -e "KONG_PG_USER=kong" \
+ -e "KONG_PG_PASSWORD=kongpass" \
+ -e "KONG_PROXY_ACCESS_LOG=/dev/stdout" \
+ -e "KONG_ADMIN_ACCESS_LOG=/dev/stdout" \
+ -e "KONG_PROXY_ERROR_LOG=/dev/stderr" \
+ -e "KONG_ADMIN_ERROR_LOG=/dev/stderr" \
+ -e "KONG_ADMIN_LISTEN=0.0.0.0:8001" \
+ -e "KONG_ADMIN_GUI_URL=http://localhost:8002" \
+ -e KONG_LICENSE_DATA \
+ -p 8000:8000 \
+ -p 8443:8443 \
+ -p 8001:8001 \
+ -p 8444:8444 \
+ -p 8002:8002 \
+ -p 8445:8445 \
+ -p 8003:8003 \
+ -p 8004:8004 \
+ kong/kong-gateway:3.6.1.4
+~~~~
+
+Where:
+
+--name and --network: The name of the container to create, and the Docker network it communicates on.
+KONG_DATABASE: Specifies the type of database that Kong is using.
+KONG_PG_HOST: The name of the Postgres Docker container that is communicating over the kong-net network.
+KONG_PG_USER and KONG_PG_PASSWORD: The Postgres username and password. Kong Gateway needs the login information to store configuration data in the KONG_PG_HOST database.
+All _LOG parameters: set filepaths for the logs to output to, or use the values in the example to print messages and errors to stdout and stderr.
+KONG_ADMIN_LISTEN: The port that the Kong Admin API listens on for requests.
+KONG_ADMIN_GUI_URL: The URL for accessing Kong Manager, preceded by a protocol (for example, http://).
+KONG_LICENSE_DATA: (Enterprise only) If you have a license file and have saved it as an environment variable, this parameter pulls the license from your environment.
+
+
+## ⚙️ Open your browser and access the address below to view Kong Admin.
+
+[localhost:8002/](localhost:8002/)
+
+![docs_readme/kong_admin.png](docs_readme/kong_admin.png)
+
+
