@@ -129,6 +129,6 @@ curl --location 'http://localhost:3000/book/Dramaturgia/genre'
 curl --location 'http://localhost:3000/book/all'
 ~~~~
 
-![docs_readme/find_all.png](docs_readme/find_all.png)
+[docs_readme/find_all.png](docs_readme/find_all.png)
 
 
