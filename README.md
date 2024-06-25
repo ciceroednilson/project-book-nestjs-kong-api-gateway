@@ -36,7 +36,7 @@ CREATE DATABASE `db_labs_systems`;
 
 ~~~~sql
 CREATE TABLE IF NOT EXISTS tb_livros_oceanos_mapeados (
-  id INTEGER PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  	id INTEGER PRIMARY KEY AUTO_INCREMENT NOT NULL,
 	ano INTEGER NULL,
 	id_inscrito VARCHAR(250) NULL,
 	responsavel VARCHAR(250) NULL,	
