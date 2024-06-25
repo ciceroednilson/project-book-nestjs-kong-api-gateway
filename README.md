@@ -87,3 +87,11 @@ source: [https://github.com/ciceroednilson/project-book-nestjs-kong-api-gateway/
 ~~~~shell
 npm install
 ~~~~
+
+## ⚙️ Execute the command bellow at root folder to execute the unit tests with jest.
+
+~~~~shell
+npm test
+~~~~
+
+![docs_readme/import_1.png](docs_readme/unit_test.png)
