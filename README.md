@@ -20,3 +20,7 @@
 ## ⚙️ Architecture General.
 
 ![docs_readme/architecture_general.drawio.png](docs_readme/architecture_general.drawio.png)
+
+## ⚙️ Architecture Of API.
+
+![docs_readme/api_arch.png](docs_readme/api_arch.png)

@@ -1,0 +1,37 @@
+export class BookModel {
+    year?: number | null;
+    subscriberId?: string | null;
+    responsible?: string | null;
+    responsibleName?: string | null;
+    bookTitle?: string | null;
+    isbn?: string | null;
+    bookGenre?: string | null;
+    firstEditionCountryName?: string | null;
+    publicationType?: string | null;
+    authorName?: string | null;
+    authorGenre?: string | null;
+    authorAge?: string | null;
+    authorCountryName?: string | null;
+    authorNationality?: string | null;
+    authorPrimaryActivityIndicator?: string | null;
+    authorFormalEducation?: string | null;
+    authorOtherWorksPublicationIndicator?: boolean | null;
+    authorPublishedWorksQuantity?: number | null;
+    publisherName?: string | null;
+    publisherOriginCountry?: string | null;
+    publisherHeadquartersLocation?: string | null;
+    publisherFoundingYear?: number | null;
+    publisherMainLine?: string | null;
+    publisherDistributionChannel?: string | null;
+    publisherPrintRun?: string | null;
+    publisherEditionFinancing?: string | null;
+    publisherFinancingGroup?: string | null;
+    publisherWebsite?: string | null;
+    otherEditionsIndicator?: string | null;
+    otherEditionsPublisherName?: string | null;
+    otherEditionsPublicationYear?: number | null;
+    otherEditionsCountryName?: string | null;
+    semifinalistIndicator?: string | null;
+    finalistIndicator?: string | null;
+    winnerIndicator?: string | null;    
+}

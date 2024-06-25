@@ -1,0 +1,88 @@
+<mxfile host="app.diagrams.net" modified="2024-06-25T01:00:13.294Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 OPR/109.0.0.0" etag="P-bJ3azIes60KGDJ_fBL" version="24.6.2" type="device">
+  <diagram name="Página-1" id="L7xdlz-zMW9MoNKVqoXb">
+    <mxGraphModel dx="2350" dy="2296" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="LdnCjthLh3fXMu0SaxEt-29" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-100" y="-40" width="1380" height="540" as="geometry" />
+        </mxCell>
+        <mxCell id="LdnCjthLh3fXMu0SaxEt-19" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;gradientColor=#b3b3b3;gradientDirection=west;" vertex="1" parent="1">
+          <mxGeometry x="-60" y="20" width="1050" height="430" as="geometry" />
+        </mxCell>
+        <mxCell id="LdnCjthLh3fXMu0SaxEt-14" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="160" y="50" width="600" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="LdnCjthLh3fXMu0SaxEt-7" value="&lt;b&gt;PORTS&lt;/b&gt;&lt;br&gt;(book.service.port.ts)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="75" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LdnCjthLh3fXMu0SaxEt-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="LdnCjthLh3fXMu0SaxEt-10" target="LdnCjthLh3fXMu0SaxEt-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LdnCjthLh3fXMu0SaxEt-10" value="&lt;b&gt;PORTS&lt;/b&gt;&lt;br&gt;(book.repository.port.ts)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="610" y="325" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LdnCjthLh3fXMu0SaxEt-12" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="-40" y="50" width="180" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="LdnCjthLh3fXMu0SaxEt-1" value="&lt;b&gt;CONTROLLER&lt;/b&gt;&lt;br&gt;(book.controller.ts)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-10" y="75" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LdnCjthLh3fXMu0SaxEt-13" value="APPLICATION LAYER" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="-25" y="160" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LdnCjthLh3fXMu0SaxEt-15" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="290" y="75" width="315" height="315" as="geometry" />
+        </mxCell>
+        <mxCell id="LdnCjthLh3fXMu0SaxEt-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="LdnCjthLh3fXMu0SaxEt-8" target="LdnCjthLh3fXMu0SaxEt-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LdnCjthLh3fXMu0SaxEt-8" value="&lt;b&gt;DOMAIN&lt;/b&gt;&lt;br&gt;(book.service.ts)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="387.5" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LdnCjthLh3fXMu0SaxEt-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="LdnCjthLh3fXMu0SaxEt-9" target="LdnCjthLh3fXMu0SaxEt-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LdnCjthLh3fXMu0SaxEt-9" value="&lt;b&gt;MODEL&lt;/b&gt;&lt;br&gt;(book.model.ts)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="387.5" y="290" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LdnCjthLh3fXMu0SaxEt-16" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="770" y="300" width="180" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="LdnCjthLh3fXMu0SaxEt-17" value="INFRASTRUCTURE LAYER" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="1">
+          <mxGeometry x="785" y="410" width="165" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LdnCjthLh3fXMu0SaxEt-11" value="&lt;b&gt;REPOSITORY&lt;/b&gt;&lt;br&gt;(book.repository.ts)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="807.5" y="325" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LdnCjthLh3fXMu0SaxEt-18" value="DOMAIN LAYER" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="1">
+          <mxGeometry x="380" y="410" width="165" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LdnCjthLh3fXMu0SaxEt-20" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="LdnCjthLh3fXMu0SaxEt-1" target="LdnCjthLh3fXMu0SaxEt-7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="130" y="150" as="sourcePoint" />
+            <mxPoint x="180" y="100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LdnCjthLh3fXMu0SaxEt-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="LdnCjthLh3fXMu0SaxEt-7" target="LdnCjthLh3fXMu0SaxEt-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LdnCjthLh3fXMu0SaxEt-25" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=default;gradientDirection=east;gradientColor=#b3b3b3;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="17.5" width="230" height="430" as="geometry" />
+        </mxCell>
+        <mxCell id="LdnCjthLh3fXMu0SaxEt-27" value="&lt;b&gt;MYSQL&lt;/b&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="1070" y="280" width="110" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="LdnCjthLh3fXMu0SaxEt-28" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.018;entryY=0.547;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="LdnCjthLh3fXMu0SaxEt-27">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="930" y="360" as="sourcePoint" />
+            <mxPoint x="980" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LdnCjthLh3fXMu0SaxEt-30" value="ARCHITECTURE OF API - HEXAGONAL" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="485" y="-20" width="235" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
