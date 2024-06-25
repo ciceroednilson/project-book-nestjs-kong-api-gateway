@@ -74,3 +74,16 @@ CREATE TABLE IF NOT EXISTS tb_livros_oceanos_mapeados (
 	indicador_vencedor VARCHAR(250) NULL
 ) 
 ~~~~
+
+## ⚙️ Load the csv in Database with the DBeaver.
+
+![docs_readme/import_1.png](docs_readme/import_1.png)
+
+
+## ⚙️ Execute the command bellow to download of dependencies.
+
+source: [https://github.com/ciceroednilson/project-book-nestjs-kong-api-gateway/tree/master/source/project-book](https://github.com/ciceroednilson/project-book-nestjs-kong-api-gateway/tree/master/source/project-book)
+
+~~~~shell
+npm install
+~~~~
