@@ -26,6 +26,23 @@
 ![docs_readme/api_arch.png](docs_readme/api_arch.png)
 
 
+## ⚙️ Pull MySQL to Docker.
+~~~~shell
+docker pull mysql
+~~~~
+
+## ⚙️ Create a network in Docker.
+
+~~~~shell
+docker network create -d bridge my-bridge-network
+~~~~
+
+## ⚙️ Create a container in Docker.
+
+~~~~shell
+docker run  -p 3306:3306 --network=my-bridge-network --hostname base-mysql --name base-mysql -e MYSQL_ROOT_PASSWORD=123456 -d mysql:latest
+~~~~
+
 ## ⚙️ Creating a Database on MySQL.
 
 ~~~~sql
