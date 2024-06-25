@@ -108,3 +108,17 @@ npm start
 [http://localhost:3000/api](http://localhost:3000/api)
 
 ![docs_readme/swagger.png](docs_readme/swagger.png)
+
+## ⚙️ Test with Postman.
+
+![https://www.postman.com](https://www.postman.com)
+
+![docs_readme/postman.png](docs_readme/postman.png)
+
+### ⚙️ Find the books by genre "Dramaturgia".
+
+~~~~shell
+curl --location 'http://localhost:3000/book/Dramaturgia/genre'
+~~~~
+
+![docs_readme/find_by_genre.png](docs_readme/find_by_genre.png)
