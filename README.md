@@ -17,3 +17,6 @@
   <li>Kong Api gateway</li>
 </ol>
 
+## ⚙️ Architecture General.
+
+![docs_readme/architecture_general.drawio.png](docs_readme/architecture_general.drawio.png)
