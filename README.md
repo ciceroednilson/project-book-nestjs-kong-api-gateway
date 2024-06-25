@@ -157,3 +157,18 @@ curl --location --request DELETE 'http://localhost:3000/book/2/key'
 
 ![docs_readme/delete_post.png](docs_readme/delete_post.png)
 
+## ⚙️ Dockerizing NestJS application.
+
+~~~~shell
+ docker build -f Dockerfile -t img-api-book .
+~~~~
+
+![docs_readme/dockering.png](docs_readme/dockering.png)
+
+## ⚙️ Create a container in Docker with our image..
+
+~~~~shell
+docker run  -p 3000:3000 --network=my-bridge-network --hostname api-book --name api-book -d img-api-book:latest
+~~~~
+
+![docs_readme/container.png](docs_readme/container.png)
