@@ -115,7 +115,7 @@ npm start
 
 ![docs_readme/postman.png](docs_readme/postman.png)
 
-## ⚙️ Find the books by genre "Dramaturgia".
+## ⚙️ Postman - Find the books by genre "Dramaturgia".
 
 ~~~~shell
 curl --location 'http://localhost:3000/book/Dramaturgia/genre'
@@ -123,7 +123,7 @@ curl --location 'http://localhost:3000/book/Dramaturgia/genre'
 
 ![docs_readme/find_by_genre.png](docs_readme/find_by_genre.png)
 
-## ⚙️ Find all books.
+## ⚙️ Postman - Find all books.
 
 ~~~~shell
 curl --location 'http://localhost:3000/book/all'
@@ -131,4 +131,12 @@ curl --location 'http://localhost:3000/book/all'
 
 ![docs_readme/find_all.png](docs_readme/find_all.png)
 
+
+## ⚙️ Postman - Delete a book by id.
+
+~~~~shell
+curl --location --request DELETE 'http://localhost:3000/book/2/key'
+~~~~
+
+![docs_readme/delete_post.png](docs_readme/delete_post.png)
 
