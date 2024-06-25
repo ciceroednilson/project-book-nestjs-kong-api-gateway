@@ -94,3 +94,10 @@ npm install
 npm test
 ~~~~
 ![docs_readme/unit_test_img.png](docs_readme/unit_test_img.png)
+
+## ⚙️ Execute the command bellow at root folder to start the API.
+
+~~~~shell
+npm start
+~~~~
+![docs_readme/api_start.png](docs_readme/api_start.png)
