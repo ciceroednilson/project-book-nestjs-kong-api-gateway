@@ -7,8 +7,9 @@
 <ol>
   <li>Node</li>
   <li>Npm</li>
-  <li>Nest</li>
+  <li>NestJS</li>
   <li>Jest</li>
+  <li>Swagger</li>
   <li>Postman</li>
   <li>Mysql</li>
   <li>Dbeaver</li>
