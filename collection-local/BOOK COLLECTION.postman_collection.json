@@ -1,0 +1,94 @@
+{
+	"info": {
+		"_postman_id": "90c10c0d-472d-4ae3-93f6-b5dfa8084b9f",
+		"name": "BOOK COLLECTION",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6166502",
+		"_collection_link": "https://blue-firefly-2315.postman.co/workspace/TI-HOME~e9296933-5f46-4242-9f9e-39df2141eb22/collection/6166502-90c10c0d-472d-4ae3-93f6-b5dfa8084b9f?action=share&source=collection_link&creator=6166502"
+	},
+	"item": [
+		{
+			"name": "FIND BY GENRE - Conto",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/book/Conto/genre",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"book",
+						"Conto",
+						"genre"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FIND BY GENRE - Dramaturgia",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/book/Dramaturgia/genre",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"book",
+						"Dramaturgia",
+						"genre"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FIND ALL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/book/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"book",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/book/2/key",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"book",
+						"2",
+						"key"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

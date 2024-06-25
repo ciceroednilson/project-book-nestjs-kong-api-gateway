@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "ed6fc2d3-7fe8-4711-8814-c67c027d64cd",
+		"name": "BOOK COLLECTION SERVER",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6166502",
+		"_collection_link": "https://blue-firefly-2315.postman.co/workspace/TI-HOME~e9296933-5f46-4242-9f9e-39df2141eb22/collection/6166502-ed6fc2d3-7fe8-4711-8814-c67c027d64cd?action=share&source=collection_link&creator=6166502"
+	},
+	"item": [
+		{
+			"name": "FIND BY GENRE - Conto",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://api.books.ciceroednilson.br:3000/book/Conto/genre",
+					"protocol": "http",
+					"host": [
+						"api",
+						"books",
+						"ciceroednilson",
+						"br"
+					],
+					"port": "3000",
+					"path": [
+						"book",
+						"Conto",
+						"genre"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FIND BY GENRE - Dramaturgia",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://api.books.ciceroednilson.br:3000/book/Dramaturgia/genre",
+					"protocol": "http",
+					"host": [
+						"api",
+						"books",
+						"ciceroednilson",
+						"br"
+					],
+					"port": "3000",
+					"path": [
+						"book",
+						"Dramaturgia",
+						"genre"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FIND ALL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://api.books.ciceroednilson.br:3000/book/all",
+					"protocol": "http",
+					"host": [
+						"api",
+						"books",
+						"ciceroednilson",
+						"br"
+					],
+					"port": "3000",
+					"path": [
+						"book",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://api.books.ciceroednilson.br:3000/book/2/key",
+					"protocol": "http",
+					"host": [
+						"api",
+						"books",
+						"ciceroednilson",
+						"br"
+					],
+					"port": "3000",
+					"path": [
+						"book",
+						"2",
+						"key"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
