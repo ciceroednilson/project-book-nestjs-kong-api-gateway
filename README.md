@@ -93,4 +93,4 @@ npm install
 ~~~~shell
 npm test
 ~~~~
-![docs_readme/import_1.png](docs_readme/unit_test.png)
+![docs_readme/unit_test_img.png](docs_readme/unit_test_img.png)
