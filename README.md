@@ -31,16 +31,17 @@
 docker pull mysql
 ~~~~
 
-## ⚙️ Create a network in Docker.
+
+## ⚙️ Create a network in Docker for MySQL, Kong Api Gateway and API.
 
 ~~~~shell
-docker network create -d bridge my-bridge-network
+	docker network create kong-net
 ~~~~
 
 ## ⚙️ Create a container in Docker.
 
 ~~~~shell
-docker run  -p 3306:3306 --network=my-bridge-network --hostname base-mysql --name base-mysql -e MYSQL_ROOT_PASSWORD=123456 -d mysql:latest
+docker run  -p 3306:3306 --network=kong-net --hostname base-mysql --name base-mysql -e MYSQL_ROOT_PASSWORD=123456 -d mysql:latest
 ~~~~
 
 ## ⚙️ Creating a Database on MySQL.
@@ -157,6 +158,7 @@ curl --location --request DELETE 'http://localhost:3000/book/2/key'
 
 ![docs_readme/delete_post.png](docs_readme/delete_post.png)
 
+
 ## ⚙️ Dockerizing NestJS application.
 
 ~~~~shell
@@ -168,17 +170,10 @@ curl --location --request DELETE 'http://localhost:3000/book/2/key'
 ## ⚙️ Create a container in Docker with our image.
 
 ~~~~shell
-docker run  -p 3000:3000 --network=my-bridge-network --hostname api-book --name api-book -d img-api-book:latest
+docker run  -p 3000:3000 --network=kong-net --hostname api-book --name api-book -d img-api-book:latest
 ~~~~
 
 ![docs_readme/container.png](docs_readme/container.png)
-
-
-## ⚙️ Create a network in Docker for Kong Api Gateway.
-
-~~~~shell
-	docker network create kong-net
-~~~~
 
 ## ⚙️ Create a container Postgres in Docker for Kong Data Base.
 
