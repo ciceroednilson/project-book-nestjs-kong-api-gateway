@@ -243,10 +243,73 @@ Where:
 
 ## ⚙️ Open your browser and access the address below to view Kong Admin.
 
-[localhost:8002/](localhost:8002/)
+[http://localhost:8002/](http://localhost:8002/)
 
 ![docs_readme/kong_admin.png](docs_readme/kong_admin.png)
 
+## ⚙️ In Kong, you can access the Gateway Services menu and click on 'New Gateway Service'.
+
+![docs_readme/gateway-services.png](docs_readme/gateway-services.png)
+
+## ⚙️ Create a new gateway.
+
+"Attention: In the path, I use the name of my container (api-book)."
+
+![docs_readme/new-gateway.png](docs_readme/new-gateway.png)
+
+## ⚙️ To create a new route, you can access the Routes menu as shown in the image below.
+
+![docs_readme/kong_router.png](docs_readme/kong_router.png)
+
+## ⚙️ After configuring your route as shown in the image below, you need to click the 'Save' button.
+
+![docs_readme/new_router.png](docs_readme/new_router.png)
+
+## ⚙️ After configuring your route, you can add a plugin to capture the logs.
+
+In your route, click on the 'Plugins' menu and then click on '+ New Plugin'.
+
+![docs_readme/new_plugin.png](docs_readme/new_plugin.png)
+
+## ⚙️ "Search for the HTTP Log plugin. Once you have found it, click on 'Enable'.
+
+![docs_readme/http_log_plugin.png](docs_readme/http_log_plugin.png)
+
+## ⚙️ You can access the site below to create an address to receive some logs of requests.
+
+[https://mockbin.io](https://mockbin.io)
+
+![docs_readme/site_log.png](docs_readme/site_log.png)
+
+## ⚙️ You need to copy the address generated to past it into Kong.
+
+![docs_readme/mock_bin.png](docs_readme/mock_bin.png)
+
+## ⚙️ After copying the address, paste it into Kong and save.
+
+![docs_readme/config_log.png](docs_readme/config_log.png)
+
+## ⚙️ Now execute a request to the route that you created in Kong.
+
+~~~~shell
+curl --location 'http://api.gateway.ciceroednilson.br:8000/book/all'
+~~~~
+
+![docs_readme/test_gateway.png](docs_readme/test_gateway.png)
+
+## ⚙️ After executing the request, you can view the log on the site.
+
+![docs_readme/log_after_test.png](docs_readme/log_after_test.png)
+
+## ⚙️Now you can configure other routes for our API.
+
+~~~~shell
+curl --location 'http://api-book:3000/book/{genre}/genre'
+~~~~
+
+~~~~shell
+curl --location --request DELETE 'http://api-book:3000/book/{key}/key'
+~~~~
 
 ## 📌 Version.
 
