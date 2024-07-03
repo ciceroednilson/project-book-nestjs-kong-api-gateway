@@ -1,4 +1,4 @@
-# Project to learn Nestjs and Kong Api Gateway.
+# Project to learn NestJS and Kong API Gateway.
 
 ![docs_readme/archicture_new.png](docs_readme/nest-og.png)
 
@@ -17,40 +17,40 @@
   <li>Kong Api gateway</li>
 </ol>
 
-## ⚙️ Architecture General.
+## ⚙️ General Architecture.
 
 ![docs_readme/architecture_general.drawio.png](docs_readme/architecture_general.drawio.png)
 
-## ⚙️ Architecture of API.
+## ⚙️ API Architecture.
 
 ![docs_readme/api_arch.png](docs_readme/api_arch.png)
 
 
-## ⚙️ Pull MySQL to Docker.
+## ⚙️ Pull MySQL into Docker.
 ~~~~shell
 docker pull mysql
 ~~~~
 
 
-## ⚙️ Create a network in Docker for MySQL, Kong Api Gateway and API.
+## ⚙️ Create a Docker network for MySQL, Kong API Gateway, and the API.
 
 ~~~~shell
 	docker network create kong-net
 ~~~~
 
-## ⚙️ Create a container in Docker.
+## ⚙️ Create a MySQL container in Docker.
 
 ~~~~shell
 docker run  -p 3306:3306 --network=kong-net --hostname base-mysql --name base-mysql -e MYSQL_ROOT_PASSWORD=123456 -d mysql:latest
 ~~~~
 
-## ⚙️ Creating a Database on MySQL.
+## ⚙️ Creating a Database in MySQL.
 
 ~~~~sql
 CREATE DATABASE `db_labs_systems`;
 ~~~~
 
-## ⚙️ Creating a Table on Database.
+## ⚙️ Creating a table in a database.
 
 ~~~~sql
 CREATE TABLE IF NOT EXISTS tb_livros_oceanos_mapeados (
@@ -93,12 +93,12 @@ CREATE TABLE IF NOT EXISTS tb_livros_oceanos_mapeados (
 ) 
 ~~~~
 
-## ⚙️ Load the csv in Database with the DBeaver.
+## ⚙️ Load the CSV into the database using DBeaver.
 
 ![docs_readme/import_1.png](docs_readme/import_1.png)
 
 
-## ⚙️ Execute the command bellow to download of dependencies.
+## ⚙️ Execute the command below to download dependencies.
 
 source: [https://github.com/ciceroednilson/project-book-nestjs-kong-api-gateway/tree/master/source/project-book](https://github.com/ciceroednilson/project-book-nestjs-kong-api-gateway/tree/master/source/project-book)
 
@@ -106,14 +106,14 @@ source: [https://github.com/ciceroednilson/project-book-nestjs-kong-api-gateway/
 npm install
 ~~~~
 
-## ⚙️ Execute the command bellow at root folder to execute the unit tests with jest.
+## ⚙️ Execute the command below in the root folder to run the unit tests with Jest.
 
 ~~~~shell
 npm test
 ~~~~
 ![docs_readme/unit_test_img.png](docs_readme/unit_test_img.png)
 
-## ⚙️ Execute the command bellow at root folder to start the API.
+## ⚙️ Execute the command below in the root folder to start the API.
 
 ~~~~shell
 npm start
@@ -121,19 +121,19 @@ npm start
 ![docs_readme/api_start.png](docs_readme/api_start.png)
 
 
-## ⚙️ Open your browser and access the address below to view Swagger documentation.
+## ⚙️ Open your browser and access the following address to view Swagger documentation.
 
 [http://localhost:3000/api](http://localhost:3000/api)
 
 ![docs_readme/swagger.png](docs_readme/swagger.png)
 
-## ⚙️ Test with Postman.
+## ⚙️ Test using Postman.
 
 [https://www.postman.com](https://www.postman.com)
 
 ![docs_readme/postman.png](docs_readme/postman.png)
 
-## ⚙️ Postman - Find the books by genre "Dramaturgia".
+## ⚙️ Postman - Find books by genre 'Dramaturgia'.
 
 ~~~~shell
 curl --location 'http://localhost:3000/book/Dramaturgia/genre'
@@ -141,7 +141,7 @@ curl --location 'http://localhost:3000/book/Dramaturgia/genre'
 
 ![docs_readme/find_by_genre.png](docs_readme/find_by_genre.png)
 
-## ⚙️ Postman - Find all books.
+## ⚙️ Postman - Retrieve all books.
 
 ~~~~shell
 curl --location 'http://localhost:3000/book/all'
@@ -150,7 +150,7 @@ curl --location 'http://localhost:3000/book/all'
 ![docs_readme/find_all.png](docs_readme/find_all.png)
 
 
-## ⚙️ Postman - Delete a book by id.
+## ⚙️ Postman - Delete a book by ID.
 
 ~~~~shell
 curl --location --request DELETE 'http://localhost:3000/book/2/key'
@@ -159,7 +159,7 @@ curl --location --request DELETE 'http://localhost:3000/book/2/key'
 ![docs_readme/delete_post.png](docs_readme/delete_post.png)
 
 
-## ⚙️ Dockerizing NestJS application.
+## ⚙️ Dockerizing a NestJS application.
 
 ~~~~shell
  docker build -f Dockerfile -t img-api-book .
@@ -167,7 +167,7 @@ curl --location --request DELETE 'http://localhost:3000/book/2/key'
 
 ![docs_readme/dockering.png](docs_readme/dockering.png)
 
-## ⚙️ Create a container in Docker with our image.
+## ⚙️ Create a Docker container with our custom image.
 
 ~~~~shell
 docker run  -p 3000:3000 --network=kong-net --hostname api-book --name api-book -d img-api-book:latest
@@ -175,7 +175,7 @@ docker run  -p 3000:3000 --network=kong-net --hostname api-book --name api-book 
 
 ![docs_readme/container.png](docs_readme/container.png)
 
-## ⚙️ Create a container Postgres in Docker for Kong Data Base.
+## ⚙️ Create a PostgreSQL container in Docker for the Kong database.
 
 ~~~~shell
 	 docker run -d --name kong-database \
@@ -201,7 +201,7 @@ POSTGRES_PASSWORD: Set the database password to any string. In this example, the
 kong/kong-gateway:3.6.1.4 kong migrations bootstrap
 ~~~~
 
-## ⚙️ Create a container Kong in Docker.
+## ⚙️ Create a Kong container in Docker.
 
 ~~~~shell
 docker run -d --name kong-gateway \
@@ -241,7 +241,7 @@ Where:
 	<li>KONG_LICENSE_DATA: (Enterprise only) If you have a license file and have saved it as an environment variable, this parameter pulls the license from your environment.</li>  
 </ol>
 
-## ⚙️ Open your browser and access the address below to view Kong Admin.
+## ⚙️ Open your browser and access the following address to view the Kong Admin.
 
 [http://localhost:8002/](http://localhost:8002/)
 
