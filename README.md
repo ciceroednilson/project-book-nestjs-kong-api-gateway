@@ -32,7 +32,7 @@ docker pull mysql
 ~~~~
 
 
-## ⚙️ Create a Docker network for MySQL, Kong API Gateway, and the API.
+## ⚙️ Create a Docker network for MySQL, Kong API Gateway and the API.
 
 ~~~~shell
 	docker network create kong-net
